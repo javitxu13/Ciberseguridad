@@ -1,0 +1,52 @@
+/* CybersecurityStats.css */
+
+.cybersecurity-stat {
+    text-align: center;
+    margin-bottom: 8%;
+    margin-top: 20px;
+  }
+  
+  .stat-label {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .circular-progress {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .progress-ring {
+    transform: rotate(-90deg);
+  }
+  
+  .progress-ring-circle {
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke: #13b356;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dashoffset: 10;
+  }
+  
+  .stat-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .cybersecurity-stats-heading {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+  
+  .cybersecurity-stats-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  

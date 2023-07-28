@@ -1,0 +1,67 @@
+/* About.css */
+
+/* Main section container */
+.about-us {
+  padding: 50px;
+  background-color: #f5f5f5;
+}
+
+/* Columns container */
+.column-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Column styles */
+.column {
+  flex: 1;
+  margin-bottom: 30px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* About Us Title */
+.about-us-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* About Us Paragraphs */
+.about-us-paragraph {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.last-paragraph {
+  margin-bottom: 0;
+}
+
+/* About Us Subtitle with FontAwesome Icon */
+.about-us-subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+/* FontAwesome Icon */
+.about-us-subtitle .svg-inline--fa {
+  margin-right: 10px;
+  color: #007bff; /* You can change the icon color here */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .column {
+    flex: 100%;
+  }
+}
