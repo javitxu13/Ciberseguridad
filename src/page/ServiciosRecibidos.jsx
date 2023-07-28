@@ -10,6 +10,7 @@ const ServiciosContratados = () => {
   useEffect(() => {
     obtenerServiciosContratados();
   }, []);
+  
 
   const obtenerServiciosContratados = () => {
     // Obtener referencia a la base de datos de Firebase
