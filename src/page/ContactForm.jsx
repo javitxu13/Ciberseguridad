@@ -1,25 +1,48 @@
-// src/page/ContactForm.jsx
 import React, { useState } from 'react';
-import firestore from "../page/FirebaseConfig"; // Corrected import path
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc, serverTimestamp } from "firebase/firestore";
+import '../css/ContactForm.css';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false); // New state for form submission status
-  const [isSubmitting, setIsSubmitting] = useState(false); // New state for form submission status
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+
+  const firebaseConfig = {
+
+    apiKey: "AIzaSyAOHBWoYzT1waORTwL96rlr9AKXynoq-7Q",
+  
+    authDomain: "paginaweb-54845.firebaseapp.com",
+  
+    projectId: "paginaweb-54845",
+  
+    storageBucket: "paginaweb-54845.appspot.com",
+  
+    messagingSenderId: "1011225317488",
+  
+    appId: "1:1011225317488:web:5a5f89c4bee6f6f8f564b5"
+  
+  };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Initialize Firebase app and Firestore
+    const app = initializeApp(firebaseConfig);
+    const firestore = getFirestore(app);
+
     try {
       // Guardar la información en Firebase
-      await firestore.collection('contact_messages').add({
+      await addDoc(collection(firestore, 'contact_messages'), {
         name,
         email,
         message,
-        timestamp: firestore.FieldValue.serverTimestamp(),
+        timestamp: serverTimestamp(),
       });
 
       // Limpiar el formulario después de enviar
@@ -39,7 +62,7 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      {isSubmitted && <p>¡Mensaje enviado con éxito!</p>} {/* Display success message */}
+      {isSubmitted && <p className="success-message">¡Mensaje enviado con éxito!</p>}
       <div>
         <label htmlFor="name">Nombre: </label>
         <input

@@ -1,71 +1,46 @@
-/* ContactForm styles */
-
-.contact-form-container {
+/* ContactForm.css */
+form {
   max-width: 400px;
   margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-.form-title {
-  font-size: 28px; /* Increased the font size for the title */
-  margin-bottom: 16px;
+form div {
+  margin-bottom: 20px;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-label {
+label {
+  display: block;
+  margin-bottom: 5px;
   font-weight: bold;
-  margin-bottom: 8px; /* Reduced the margin for a more compact look */
 }
 
-.form-input,
-.form-textarea {
-  padding: 12px; /* Increased the padding for better spacing */
-  margin-bottom: 16px;
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  transition: border-color 0.3s ease; /* Added a transition effect for smoother interaction */
 }
 
-.form-textarea {
-  resize: vertical;
-}
-
-.form-button {
-  padding: 12px 24px; /* Increased the padding for a more prominent button */
-  background-color: #007bff;
-  color: #fff;
+button[type="submit"] {
+  padding: 8px 20px;
+  background-color: #4CAF50;
+  color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Added a transition effect for smoother interaction */
 }
 
-.form-button:hover {
-  background-color: #0056b3;
-  /* Added a slight color change on hover for visual feedback */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added a subtle box shadow on hover */
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
-/* Added a media query for responsive design */
-@media screen and (max-width: 768px) {
-  .contact-form-container {
-    max-width: 100%; /* Adjusted the max-width for smaller screens */
-    padding: 16px; /* Added some padding to improve spacing on smaller screens */
-  }
-
-  .form-title {
-    font-size: 24px; /* Reduced the font size for the title on smaller screens */
-  }
-
-  .form-input,
-  .form-textarea {
-    padding: 10px; /* Reduced the padding on smaller screens */
-  }
-
-  .form-button {
-    padding: 10px 20px; /* Reduced the padding on smaller screens */
-  }
+.success-message {
+  color: green;
+  font-weight: bold;
 }

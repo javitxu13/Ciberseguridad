@@ -9,6 +9,8 @@ import About from "./page/About";
 import CybersecurityStats from "./page/CybersecurityStats";
 import firestore from "./page/FirebaseConfig"; // Corrected import path
 
+// Initialize Firebase only once at the root of your application
+
 function App() {
   return (
     <>
