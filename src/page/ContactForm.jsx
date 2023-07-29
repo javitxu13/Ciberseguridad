@@ -1,72 +1,75 @@
+// src/page/ContactForm.jsx
 import React, { useState } from 'react';
-import '../css/ContactForm.css';
+import firestore from "../page/FirebaseConfig"; // Corrected import path
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false); // New state for form submission status
+  const [isSubmitting, setIsSubmitting] = useState(false); // New state for form submission status
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Aquí puedes implementar la lógica para enviar los datos a un servidor o realizar alguna acción con ellos
-    console.log(formData);
-    // Luego de enviar los datos, puedes limpiar el formulario
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
+    setIsSubmitting(true);
+
+    try {
+      // Guardar la información en Firebase
+      await firestore.collection('contact_messages').add({
+        name,
+        email,
+        message,
+        timestamp: firestore.FieldValue.serverTimestamp(),
+      });
+
+      // Limpiar el formulario después de enviar
+      setName('');
+      setEmail('');
+      setMessage('');
+
+      // Set form submission status to true
+      setIsSubmitted(true);
+    } catch (error) {
+      // Handle the error gracefully, e.g., show an error message to the user
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div className="contact-form-container">
-      <h2 className="form-title">Formulario de contacto</h2>
-      <form onSubmit={handleSubmit} className="form">
-        <label htmlFor="name" className="form-label">Nombre:</label>
+    <form onSubmit={handleSubmit}>
+      {isSubmitted && <p>¡Mensaje enviado con éxito!</p>} {/* Display success message */}
+      <div>
+        <label htmlFor="name">Nombre: </label>
         <input
           type="text"
           id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-          className="form-input"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
-
-        <label htmlFor="email" className="form-label">Correo electrónico:</label>
+      </div>
+      <div>
+        <label htmlFor="email">Email: </label>
         <input
           type="email"
           id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-          className="form-input"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
-
-        <label htmlFor="message" className="form-label">Mensaje:</label>
+      </div>
+      <div>
+        <label htmlFor="message">Mensaje: </label>
         <textarea
           id="message"
-          name="message"
-          rows="4"
-          value={formData.message}
-          onChange={handleChange}
-          required
-          className="form-textarea"
-        ></textarea>
-
-        <button type="submit" className="form-button">Enviar</button>
-      </form>
-    </div>
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+      </div>
+      <button type="submit" disabled={isSubmitting}>
+        {isSubmitting ? 'Enviando...' : 'Enviar'}
+      </button>
+    </form>
   );
 };
 
