@@ -3,28 +3,34 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 50px;
+    padding: 50px;
+    background-color: #000000;
+    color: #fff;
   }
+
   
 
   .hero-content p {
-    font-size: 20px;
+    font-size: 18px;
     color: #555;
     margin-bottom: 25px;
+    line-height: 24px;
+
+  }
+
+  .hero-content{
+    margin-bottom:19%;
   }
   
   .cta-button {
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #007bff;
+    background-color: #082646;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
   }
   
   .cta-button:hover {
@@ -32,11 +38,13 @@
   }
   
   .hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
+    max-width: 95%;
+    border-radius: 60%;
+    padding-bottom: 50%;
   
+
+  }
+
   .hero-description {
     flex: 1;
     margin-left: 40px;
@@ -55,7 +63,7 @@
   }
 
   .hor{
-    font-size:60px;
+    font-size:55px;
     margin-bottom: 25px;
   }
 

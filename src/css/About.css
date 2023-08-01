@@ -1,9 +1,11 @@
-/* About.css */
-
+/* 
 /* Main section container */
 .about-us {
   padding: 50px;
-  background-color: #f5f5f5;
+  background-color: #000000;
+  padding-top: 3%;
+  
+
 }
 
 /* Columns container */
@@ -12,32 +14,43 @@
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1200px;
-  margin: 0 auto;
 }
+
 
 /* Column styles */
 .column {
   flex: 1;
   margin-bottom: 30px;
-  background-color: #fff;
+  background-color: #000000;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  box-shadow: 0 5px 8px 7px rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding-left: 10px;
+
 }
 
 /* About Us Title */
 .about-us-title {
   font-size: 40px;
   font-weight: bold;
-  color: #333;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 60px;
+
+}
+
+.columna{
+  margin-bottom:8%;
 }
 
 /* About Us Paragraphs */
 .about-us-paragraph {
   font-size: 16px;
   line-height: 1.6;
-  color: #666;
-  margin-bottom: 30px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .last-paragraph {
@@ -46,11 +59,13 @@
 
 /* About Us Subtitle with FontAwesome Icon */
 .about-us-subtitle {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
-  color: #333;
+  color: #ffffff;
   display: flex;
   align-items: center;
+  margin-left: 50px;
+  margin-bottom: 50px;
 }
 
 /* FontAwesome Icon */

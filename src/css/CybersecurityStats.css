@@ -1,14 +1,21 @@
 /* CybersecurityStats.css */
 
+.cybersecurity-stats-container{
+  background-color: black;
+  margin-top: 0;
+}
+
 .cybersecurity-stat {
     text-align: center;
     margin-bottom: 8%;
     margin-top: 20px;
+    color: white;
   }
   
   .stat-label {
     font-size: 16px;
     margin-bottom: 10px;
+    color: white;
   }
   
   .circular-progress {
@@ -43,10 +50,14 @@
     text-align: center;
     font-size: 40px;
     margin-bottom: 60px;
+    color: white;
+    margin-top: 0;
+
   }
   
   .cybersecurity-stats-content {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 0;
   }
   

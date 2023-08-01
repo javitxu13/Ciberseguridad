@@ -1,9 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { faDna } from '@fortawesome/free-solid-svg-icons';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
 import "../css/About.css";
 
-const AboutUs = () => {
+const About = () => {
   return (
     <section className="about-us">
       <div className="column-container">
@@ -18,23 +20,23 @@ const AboutUs = () => {
         </div>
 
         <div className="column">
-          <h3 className="about-us-subtitle"><FontAwesomeIcon icon={faCheckCircle} /> Innovación en el ADN</h3>
+        <h3 className="about-us-subtitle"><FontAwesomeIcon icon={faDna} /> Innovación en el ADN</h3>
           <p className="about-us-paragraph">
             La innovación es parte de nuestro ADN. Desde nuestra fundación, hemos sido pioneros en la creación de tecnologías revolucionarias y enfoques disruptivos para mantener un paso adelante en la lucha contra las ciberamenazas. Nuestro equipo de investigación de vanguardia, apoyado por tecnología de punta, explora constantemente nuevas estrategias para garantizar la protección más avanzada.
           </p>
         </div>
 
         <div className="column">
-          <h3 className="about-us-subtitle"><FontAwesomeIcon icon={faCheckCircle} /> Más que una empresa, una comunidad</h3>
+        <h3 className="about-us-subtitle"><FontAwesomeIcon icon={faLock} /> Seguridad Digital</h3>
           <p className="about-us-paragraph">
-            En JGR, creemos en la fuerza de una comunidad sólida y colaborativa. No solo protegemos a nuestros clientes, sino que también los empoderamos para que se conviertan en defensores de su propia seguridad digital. Organizamos eventos, seminarios y grupos de discusión para compartir conocimientos y fomentar una mentalidad de ciberseguridad colectiva en la era digital.
+          Proporcionamos la máxima seguridad digital para nuestros clientes. Nuestro enfoque está en la innovación constante para enfrentar las amenazas emergentes. Ofrecemos servicios confiables y asesoramiento experto. Buscamos empoderar a nuestros clientes con recursos informativos y soluciones proactivas. Somos aliados confiables en la lucha contra las ciberamenazas.
           </p>
         </div>
 
         <div className="column">
-          <h3 className="about-us-subtitle"><FontAwesomeIcon icon={faCheckCircle} /> Un futuro audaz y seguro</h3>
+          <h3 className="about-us-subtitle"><FontAwesomeIcon icon={faCheckCircle} /> Seguridad Impulsada por IA</h3>
           <p className="about-us-paragraph">
-            Nuestro compromiso con la innovación y la excelencia nos impulsa a buscar constantemente nuevos caminos hacia un futuro audaz y seguro. Desde el aprendizaje automático hasta la inteligencia artificial y más allá, estamos forjando el camino hacia una ciberseguridad más inteligente y resistente.
+           Aprovechando el poder de la inteligencia artificial y el aprendizaje automático, estamos forjando el camino hacia una ciberseguridad más inteligente y resistente. Nuestra capacidad para analizar y anticipar patrones de comportamiento malicioso, combinada con algoritmos avanzados de detección, nos permite ofrecer soluciones de protección líderes en el mercado.
           </p>
         </div>
       </div>
@@ -42,4 +44,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default About;

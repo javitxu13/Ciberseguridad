@@ -1,0 +1,56 @@
+/* Estilo para el footer */
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .pv{
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 40px;
+
+  }
+
+  .ck{
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 40px;
+  }
+
+  .tm{
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 40px;
+  }
+  
+  /* Estilo para el contenido del footer */
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Estilo para el texto del footer */
+  .footer-text {
+    margin: 0.5rem;
+  }
+  
+  /* Estilo para los enlaces del footer */
+  .footer-links {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  

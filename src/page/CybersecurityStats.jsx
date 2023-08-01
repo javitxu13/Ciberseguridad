@@ -55,13 +55,22 @@ CybersecurityStats.propTypes = {
 const CybersecurityStatsContainer = () => {
   return (
     <section className="cybersecurity-stats-container">
-      <h2 className="cybersecurity-stats-heading">Resultados garantizados</h2>
+      <h2 className="cybersecurity-stats-heading">Métricas de seguridad informática</h2>
       <div className="cybersecurity-stats-content">
-        <CybersecurityStats label="Ciberataques detenidos" percentage={93} />
+      <CybersecurityStats label="Seguridad móvil reforzada" percentage={93} />
+        <CybersecurityStats label="Ciberataques detenidos" percentage={97} />
         <CybersecurityStats label="Objetos maliciosos neutralizados" percentage={94} />
-        <CybersecurityStats label="URL maliciosas bloqueadas" percentage={96} />
+        <CybersecurityStats label="URL maliciosas bloqueadas" percentage={96} />        
+      </div>
+      <h2 className="cybersecurity-stats-heading">Resultados de seguridad en la nube</h2>
+      <div className="cybersecurity-stats-content">
+      <CybersecurityStats label="Acceso seguro a datos" percentage={97} />
+      <CybersecurityStats label="Protección de identidad" percentage={95} />
+      <CybersecurityStats label="Prevención de ataques DDoS" percentage={96} />
+      <CybersecurityStats label="Copias de seguridad cifradas" percentage={98} />
       </div>
     </section>
+    
   );
 };
 

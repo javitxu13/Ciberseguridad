@@ -1,0 +1,53 @@
+/* Estilos CSS para el componente Partners */
+.partners-container {
+  background-color: black;
+  color: white;
+  padding-top: 10%;
+
+}
+
+.partners-container h1{
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 7%;
+}
+
+.clients-list {
+  flex-wrap: wrap;
+  gap: 20px;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente los elementos */
+
+}
+
+.client-card {
+  max-width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.client-logo {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.client-description {
+  margin-bottom: 10px;
+}
+
+.client-website-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.client-website-link:hover {
+  background-color: #0056b3;
+}
